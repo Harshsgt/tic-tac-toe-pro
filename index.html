@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Tic Tac Toe</title>
+  <link href="style.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet"/>
+</head>
+<body>
+  <div class="theme-toggle">
+    <input type="checkbox" id="toggle-theme"/>
+    <span>Click here to change theme</span>
+  </div>
+
+  <div class="container">
+    <div id="mode-screen" class="screen card fade-in">
+      <h1>Choose Mode</h1>
+      <button id="pvP">Player vs Player</button>
+      <button id="pvAI">Player vs AI</button>
+    </div>
+
+    <div id="start-screen" class="screen card hidden fade-in">
+      <h1>Tic Tac Toe</h1>
+      <div class="input-group">
+        <label for="playerX">Player 1 (X):</label>
+        <input type="text" id="playerX" placeholder="Player 1 name"/>
+      </div>
+      <div class="input-group" id="inputO">
+        <label for="playerO">Player 2 (O):</label>
+        <input type="text" id="playerO" placeholder="Player 2 name"/>
+      </div>
+      <button id="btnStart">Start Game</button>
+    </div>
+
+    <div id="game-screen" class="screen card hidden fade-in">
+      <h2 id="turn-indicator"></h2>
+      <div class="timer">Time: <span id="timer">00:00</span></div>
+      <div class="board" id="board"></div>
+      <div class="scoreboard">
+        <span id="scoreX">❌: 0</span> — <span id="scoreO">⭕: 0</span>
+      </div>
+      <button id="btnResetRound">New Round</button>
+    </div>
+
+    <div id="end-screen" class="screen card hidden fade-in">
+      <h2 id="result-message"></h2>
+      <button id="btnNext">Next Round</button>
+      <button id="btnRestart">Restart Game</button>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-content">
+      <p>Tic Tac Toe Pro • Made with 💙 by <span>Harsh Trivedi</span></p>
+      <small>© 2025 All rights reserved</small>
+    </div>
+  </footer>
+
+  <audio id="sound-move" src="https://freesound.org/data/previews/35/35487_35105-lq.mp3"></audio>
+  <audio id="sound-win" src="https://freesound.org/data/previews/19/19548_32733-lq.mp3"></audio>
+  <audio id="sound-draw" src="https://freesound.org/data/previews/178/178186_2859977-lq.mp3"></audio>
+
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
